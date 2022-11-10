@@ -12,6 +12,11 @@
 		7433E6B029081240008E38DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7433E6AF29081240008E38DF /* Main.storyboard */; };
 		7433E6B3290812C8008E38DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7433E6B2290812C8008E38DF /* SceneDelegate.swift */; };
 		7433E6B62908149C008E38DF /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7433E6B52908149C008E38DF /* PicturesViewController.swift */; };
+		748EC33B291D11580011D4B7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC33A291D11580011D4B7 /* User.swift */; };
+		748EC33D291D11DC0011D4B7 /* LocalUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC33C291D11DC0011D4B7 /* LocalUsersViewController.swift */; };
+		748EC33F291D11F40011D4B7 /* LocalUsersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC33E291D11F40011D4B7 /* LocalUsersState.swift */; };
+		748EC343291D15570011D4B7 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC341291D15570011D4B7 /* UserCell.swift */; };
+		748EC344291D15570011D4B7 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 748EC342291D15570011D4B7 /* UserCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		7433E6B129081272008E38DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7433E6B2290812C8008E38DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7433E6B52908149C008E38DF /* PicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
+		748EC33A291D11580011D4B7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		748EC33C291D11DC0011D4B7 /* LocalUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUsersViewController.swift; sourceTree = "<group>"; };
+		748EC33E291D11F40011D4B7 /* LocalUsersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUsersState.swift; sourceTree = "<group>"; };
+		748EC341291D15570011D4B7 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		748EC342291D15570011D4B7 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,7 @@
 		7433E69B29080578008E38DF /* LabaKholosha */ = {
 			isa = PBXGroup;
 			children = (
+				748EC338291D11430011D4B7 /* Domain */,
 				7433E6B429081482008E38DF /* UI */,
 				7433E6B129081272008E38DF /* Info.plist */,
 				7433E6A029080579008E38DF /* Assets.xcassets */,
@@ -69,6 +80,8 @@
 		7433E6B429081482008E38DF /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				748EC340291D153A0011D4B7 /* UserCell */,
+				748EC337291D10450011D4B7 /* Lab2 */,
 				7433E6B7290814CF008E38DF /* Lab1 */,
 			);
 			path = UI;
@@ -80,6 +93,40 @@
 				7433E6B52908149C008E38DF /* PicturesViewController.swift */,
 			);
 			path = Lab1;
+			sourceTree = "<group>";
+		};
+		748EC337291D10450011D4B7 /* Lab2 */ = {
+			isa = PBXGroup;
+			children = (
+				748EC33C291D11DC0011D4B7 /* LocalUsersViewController.swift */,
+				748EC33E291D11F40011D4B7 /* LocalUsersState.swift */,
+			);
+			path = Lab2;
+			sourceTree = "<group>";
+		};
+		748EC338291D11430011D4B7 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				748EC339291D114A0011D4B7 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		748EC339291D114A0011D4B7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				748EC33A291D11580011D4B7 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		748EC340291D153A0011D4B7 /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				748EC341291D15570011D4B7 /* UserCell.swift */,
+				748EC342291D15570011D4B7 /* UserCell.xib */,
+			);
+			path = UserCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +190,7 @@
 			files = (
 				7433E6A129080579008E38DF /* Assets.xcassets in Resources */,
 				7433E6B029081240008E38DF /* Main.storyboard in Resources */,
+				748EC344291D15570011D4B7 /* UserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,9 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748EC33D291D11DC0011D4B7 /* LocalUsersViewController.swift in Sources */,
+				748EC33B291D11580011D4B7 /* User.swift in Sources */,
 				7433E6AC290811D2008E38DF /* AppDelegate.swift in Sources */,
 				7433E6B3290812C8008E38DF /* SceneDelegate.swift in Sources */,
+				748EC33F291D11F40011D4B7 /* LocalUsersState.swift in Sources */,
 				7433E6B62908149C008E38DF /* PicturesViewController.swift in Sources */,
+				748EC343291D15570011D4B7 /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
