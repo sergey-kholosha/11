@@ -23,18 +23,15 @@ class UserCell: UITableViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var infoLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     private func renderState() {
         guard let state = state else { return }
 
-        avatarImageView.image = state.user.image?.data(using: .utf8).flatMap { UIImage(data: $0) }
-        avatarImageView.isHidden = state.user.image == nil
+        avatarImageView.image = state.user.image
+            .flatMap { Data(base64Encoded: $0) }
+            .flatMap { UIImage(data: $0) }
+        avatarImageView.isHidden = avatarImageView.image == nil
         nameLabel.text = state.user.name
-        infoLabel.text = [state.user.position, state.user.city, state.user.university]
+        infoLabel.text = [state.user.position, state.user.city, state.user.univercity]
             .joined(separator: " | ")
     }
 }

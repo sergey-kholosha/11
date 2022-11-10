@@ -87,6 +87,9 @@
                                                 <constraint firstItem="I9E-pe-u5G" firstAttribute="centerY" secondItem="ikY-IR-UtW" secondAttribute="centerY" id="TwR-7Q-DB2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="KRU-je-lDp" kind="show" id="alT-qU-Vfm"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -136,6 +139,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ETv-om-6XM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="922" y="-378"/>
+        </scene>
+        <!--Lab 3-4-->
+        <scene sceneID="Coq-0t-1fu">
+            <objects>
+                <tableViewController id="KRU-je-lDp" customClass="RemoteUsersViewController" customModule="LabaKholosha" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="syI-k3-qaU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="KRU-je-lDp" id="b55-zV-5Ak"/>
+                            <outlet property="delegate" destination="KRU-je-lDp" id="V1m-dw-mfe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Lab 3-4" id="8cd-vc-paJ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Ax-Mq-bv2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="283"/>
         </scene>
         <!--Lab 1-->
         <scene sceneID="xtX-Yb-AXI">
