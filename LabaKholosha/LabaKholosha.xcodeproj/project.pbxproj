@@ -12,6 +12,8 @@
 		7433E6B029081240008E38DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7433E6AF29081240008E38DF /* Main.storyboard */; };
 		7433E6B3290812C8008E38DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7433E6B2290812C8008E38DF /* SceneDelegate.swift */; };
 		7433E6B62908149C008E38DF /* PicturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7433E6B52908149C008E38DF /* PicturesViewController.swift */; };
+		748C38BD294887C100665C8F /* UserDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C38BC294887C100665C8F /* UserDetailsViewController.swift */; };
+		748C38BF294889A100665C8F /* UserDetailsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748C38BE294889A100665C8F /* UserDetailsState.swift */; };
 		748EC33B291D11580011D4B7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC33A291D11580011D4B7 /* User.swift */; };
 		748EC33D291D11DC0011D4B7 /* LocalUsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC33C291D11DC0011D4B7 /* LocalUsersViewController.swift */; };
 		748EC33F291D11F40011D4B7 /* LocalUsersState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748EC33E291D11F40011D4B7 /* LocalUsersState.swift */; };
@@ -30,6 +32,8 @@
 		7433E6B129081272008E38DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		7433E6B2290812C8008E38DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7433E6B52908149C008E38DF /* PicturesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesViewController.swift; sourceTree = "<group>"; };
+		748C38BC294887C100665C8F /* UserDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewController.swift; sourceTree = "<group>"; };
+		748C38BE294889A100665C8F /* UserDetailsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsState.swift; sourceTree = "<group>"; };
 		748EC33A291D11580011D4B7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		748EC33C291D11DC0011D4B7 /* LocalUsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUsersViewController.swift; sourceTree = "<group>"; };
 		748EC33E291D11F40011D4B7 /* LocalUsersState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUsersState.swift; sourceTree = "<group>"; };
@@ -100,6 +104,24 @@
 			path = Lab1;
 			sourceTree = "<group>";
 		};
+		748C38BA2948879600665C8F /* UsersList */ = {
+			isa = PBXGroup;
+			children = (
+				748EC346291D1D6D0011D4B7 /* RemoteUsersViewController.swift */,
+				748EC348291D1D8A0011D4B7 /* RemoteUsersState.swift */,
+			);
+			path = UsersList;
+			sourceTree = "<group>";
+		};
+		748C38BB294887A600665C8F /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				748C38BC294887C100665C8F /* UserDetailsViewController.swift */,
+				748C38BE294889A100665C8F /* UserDetailsState.swift */,
+			);
+			path = Details;
+			sourceTree = "<group>";
+		};
 		748EC337291D10450011D4B7 /* Lab2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,8 +159,8 @@
 		748EC345291D1D4E0011D4B7 /* Lab3 */ = {
 			isa = PBXGroup;
 			children = (
-				748EC346291D1D6D0011D4B7 /* RemoteUsersViewController.swift */,
-				748EC348291D1D8A0011D4B7 /* RemoteUsersState.swift */,
+				748C38BB294887A600665C8F /* Details */,
+				748C38BA2948879600665C8F /* UsersList */,
 			);
 			path = Lab3;
 			sourceTree = "<group>";
@@ -215,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748C38BD294887C100665C8F /* UserDetailsViewController.swift in Sources */,
 				748EC33D291D11DC0011D4B7 /* LocalUsersViewController.swift in Sources */,
 				748EC33B291D11580011D4B7 /* User.swift in Sources */,
 				7433E6AC290811D2008E38DF /* AppDelegate.swift in Sources */,
@@ -223,6 +246,7 @@
 				748EC33F291D11F40011D4B7 /* LocalUsersState.swift in Sources */,
 				7433E6B62908149C008E38DF /* PicturesViewController.swift in Sources */,
 				748EC343291D15570011D4B7 /* UserCell.swift in Sources */,
+				748C38BF294889A100665C8F /* UserDetailsState.swift in Sources */,
 				748EC347291D1D6D0011D4B7 /* RemoteUsersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

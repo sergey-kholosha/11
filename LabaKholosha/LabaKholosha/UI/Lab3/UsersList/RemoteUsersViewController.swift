@@ -9,6 +9,10 @@ import UIKit
 
 class RemoteUsersViewController: UITableViewController {
 
+    private enum Segue: String {
+        case showUser
+    }
+
     var state = RemoteUsersState()
 
     override func viewDidLoad() {
@@ -66,6 +70,21 @@ class RemoteUsersViewController: UITableViewController {
         present(alert, animated: true)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier, let segueValue = Segue(rawValue: identifier) else {
+            return
+        }
+        switch segueValue {
+        case .showUser:
+            guard let destination = segue.destination as? UserDetailsViewController,
+                    let selectedRow = tableView.indexPathForSelectedRow?.row else {
+                return
+            }
+            let user = state.users[selectedRow]
+            destination.state = .init(user: user)
+        }
+    }
+
 }
 
 extension RemoteUsersViewController {
@@ -102,5 +121,9 @@ extension RemoteUsersViewController {
         }
         state.users.remove(at: indexPath.row)
         tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Segue.showUser.rawValue, sender: self)
     }
 }
