@@ -1,9 +1,6 @@
 //
 //  PicturesViewController.swift
 //  LabaKholosha
-//
-//  Created by Yevhen Herasymenko on 25.10.2022.
-//
 
 import UIKit
 
